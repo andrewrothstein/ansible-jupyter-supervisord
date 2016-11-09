@@ -1,0 +1,32 @@
+---
+galaxy_info:
+  author: Andrew Rothstein
+  description: installs supervisord conf for a jupyter notebook
+  company: BlackRock
+  license:
+    - MIT
+  min_ansible_version: 2.0
+  platforms:
+    - name: EL
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+    - name: MacOSX
+      versions:
+        - all
+  galaxy_tags:
+    - python
+    - jupyter
+    - supervisord
+
+dependencies:
+  - role: andrewrothstein.anaconda
+    version: v1.0.10
+  - role: andrewrothstein.supervisord-program
+    version: v1.0.0
+  

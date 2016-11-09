@@ -1,0 +1,5 @@
+---
+# defaults file for jupyter-supervisord
+supervisord_program_name: jupyter
+supervisord_program_command: >-
+  /opt/anaconda/bin/jupyter notebook --ip='*'
