@@ -23,6 +23,7 @@ Example Playbook
 
     - hosts: servers
       roles:
+	     - andrewrothstein.supervisord
          - andrewrothstein.jupyter-supervisord
 
 License
