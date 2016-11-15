@@ -1,5 +1,5 @@
 ---
 # defaults file for jupyter-supervisord
+jupyter_profile_name: nbserver
+jupyter_config_dir: /opt/jupyter/profiles
 supervisord_program_name: jupyter
-supervisord_program_command: >-
-  /opt/anaconda/bin/jupyter notebook --ip='*'

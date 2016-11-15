@@ -1,2 +1,4 @@
 ---
 # vars file for jupyter-supervisord
+supervisord_program_command: >-
+  /opt/anaconda/bin/jupyter notebook --config={{jupyter_config_dir}}/{{jupyter_profile_name}}_notebook_config.py
