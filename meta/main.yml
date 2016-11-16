@@ -25,8 +25,7 @@ galaxy_info:
     - supervisord
 
 dependencies:
-  - role: andrewrothstein.anaconda
-    version: v1.0.10
+  - role: andrewrothstein.jupyter-profile
+    version: v1.0.0
   - role: andrewrothstein.supervisord-program
     version: v1.0.0
-  
