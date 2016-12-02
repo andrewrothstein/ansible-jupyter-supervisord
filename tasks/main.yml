@@ -4,6 +4,7 @@
   become_user: root
   with_items:
     - usr/local/bin/run-jupyter-notebook.sh
-  template: >-
+  template: >
     src={{item}}.j2
     dest=/{{item}}
+    mode=0755
