@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+{% if jupyter_default_conda_env is defined %}source activate {{ jupyter_default_conda_env }}{% endif %}
+/opt/anaconda/bin/jupyter notebook \
+	--config={{ jupyter_config_dir }}/{{ jupyter_profile_name }}_notebook_config.py \
+	--Session.username={{ jupyter_supervisord_username | default('root') }} \
+	--NotebookApp.notebook_dir={{ jupyter_supervisord_notebook_dir | default(jupyter_config_dir) }}
