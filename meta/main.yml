@@ -33,6 +33,7 @@ dependencies:
     jupyter_profile_name: '{{jupyter_supervisord_profile_name}}'
     jupyter_profile_config_dir: '{{jupyter_supervisord_config_dir}}'
     jupyter_profile_bin_dir: '{{jupyter_supervisord_bin_dir}}'
+    jupyter_profile_pkg_list: '{{jupyter_supervisord_pkg_list|default([])}}'
   - role: andrewrothstein.supervisord-program
     version: v1.0.2
     supervisord_program_name: jupyter

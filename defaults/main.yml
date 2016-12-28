@@ -5,3 +5,6 @@ jupyter_supervisord_config_dir: /opt/jupyter/profiles
 jupyter_supervisord_bin_dir: /opt/anaconda/bin
 jupyter_supervisord_username: root
 #jupyter_supervisord_conda_env: jupyter
+#jupyter_supervisord_pkg_list:
+#  - pkgA
+#  - pkgB
