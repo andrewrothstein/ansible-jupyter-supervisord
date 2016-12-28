@@ -1,5 +1,7 @@
 ---
 # defaults file for jupyter-supervisord
-jupyter_profile_name: nbserver
-jupyter_config_dir: /opt/jupyter/profiles
-supervisord_program_name: jupyter
+jupyter_supervisord_profile_name: nbserver
+jupyter_supervisord_config_dir: /opt/jupyter/profiles
+jupyter_supervisord_bin_dir: /opt/anaconda/bin
+jupyter_supervisord_username: root
+#jupyter_supervisord_conda_env: jupyter

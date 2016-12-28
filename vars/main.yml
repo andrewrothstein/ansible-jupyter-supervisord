@@ -1,3 +1,4 @@
 ---
 # vars file for jupyter-supervisord
-supervisord_program_command: /usr/local/bin/run-jupyter-notebook.sh
+jupyter_supervisord_profile_py: >-
+  {{jupyter_supervisord_config_dir}}/{{jupyter_supervisord_profile_name}}_notebook_config.py

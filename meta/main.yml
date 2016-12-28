@@ -16,6 +16,9 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - all
+    - name: Alpine
+      versions:
+        - all
     - name: MacOSX
       versions:
         - all
@@ -26,6 +29,12 @@ galaxy_info:
 
 dependencies:
   - role: andrewrothstein.jupyter-profile
-    version: v1.0.1
+    version: v2.0.0
+    jupyter_profile_name: '{{jupyter_supervisord_profile_name}}'
+    jupyter_profile_config_dir: '{{jupyter_supervisord_config_dir}}'
+    jupyter_profile_bin_dir: '{{jupyter_supervisord_bin_dir}}'
   - role: andrewrothstein.supervisord-program
     version: v1.0.2
+    supervisord_program_name: jupyter
+    supervisord_program_command: /usr/local/bin/run-jupyter-notebook.sh
+    supervisord_username: '{{jupyter_supervisord_username}}'
