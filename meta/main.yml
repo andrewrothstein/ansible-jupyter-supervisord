@@ -31,7 +31,6 @@ dependencies:
   - role: andrewrothstein.jupyter-profile
     version: v3.0.0
     jupyter_profile_name: '{{jupyter_supervisord_name}}'
-    jupyter_profile_python: '{{jupyter_supervisord_python}}'
     jupyter_profile_environment: '{{jupyter_supervisord_environment}}'
   - role: andrewrothstein.supervisord-program
     version: v1.0.2

@@ -1,6 +1,5 @@
 ---
 jupyter_supervisord_name: jupyter
-jupyter_supervisord_python: 3.5
 jupyter_supervisord_environment: environment.yml
 
 jupyter_supervisord_conda_root: /usr/local/anaconda
