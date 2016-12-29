@@ -29,11 +29,10 @@ galaxy_info:
 
 dependencies:
   - role: andrewrothstein.jupyter-profile
-    version: v2.0.0
-    jupyter_profile_name: '{{jupyter_supervisord_profile_name}}'
-    jupyter_profile_config_dir: '{{jupyter_supervisord_config_dir}}'
-    jupyter_profile_bin_dir: '{{jupyter_supervisord_bin_dir}}'
-    jupyter_profile_pkg_list: '{{jupyter_supervisord_pkg_list|default([])}}'
+    version: v3.0.0
+    jupyter_profile_name: '{{jupyter_supervisord_name}}'
+    jupyter_profile_python: '{{jupyter_supervisord_python}}'
+    jupyter_profile_environment: '{{jupyter_supervisord_environment}}'
   - role: andrewrothstein.supervisord-program
     version: v1.0.2
     supervisord_program_name: jupyter
