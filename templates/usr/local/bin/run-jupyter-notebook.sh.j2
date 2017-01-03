@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-{% if jupyter_supervisord_conda_env is defined %}
 source activate {{jupyter_supervisord_name}}
-{% endif %}
 
 jupyter notebook \
 	--config={{jupyter_supervisord_profile_py}} \
-	--Session.username={{jupyter_supervisord_username}}
+	--Session.username={{jupyter_supervisord_username}} {% if jupyter_supervisord_notebook_dir is defined %} \
+	--NotebookApp.notebook_dir={{jupyter_supervisord_notebook_dir}} {% endif %}
