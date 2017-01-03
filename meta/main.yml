@@ -33,7 +33,7 @@ dependencies:
     jupyter_profile_name: '{{jupyter_supervisord_name}}'
     jupyter_profile_environment: '{{jupyter_supervisord_environment}}'
   - role: andrewrothstein.supervisord-program
-    version: v1.0.2
+    version: v1.0.3
     supervisord_program_name: jupyter
     supervisord_program_command: /usr/local/bin/run-jupyter-notebook.sh
     supervisord_username: '{{jupyter_supervisord_username}}'
