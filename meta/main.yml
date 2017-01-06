@@ -29,7 +29,7 @@ galaxy_info:
 
 dependencies:
   - role: andrewrothstein.jupyter-profile
-    version: v3.0.0
+    version: v3.1.0
     jupyter_profile_name: '{{jupyter_supervisord_name}}'
     jupyter_profile_environment: '{{jupyter_supervisord_environment}}'
   - role: andrewrothstein.supervisord-program
