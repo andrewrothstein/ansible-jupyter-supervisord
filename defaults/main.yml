@@ -4,3 +4,5 @@ jupyter_supervisord_environment: environment.yml
 
 jupyter_supervisord_conda_root: /usr/local/anaconda
 jupyter_supervisord_username: root
+
+jupyter_supervisord_conda_cleanup: False
