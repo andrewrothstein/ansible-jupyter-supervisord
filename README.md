@@ -21,10 +21,12 @@ See [meta/main.yml](meta/main.yml)
 Example Playbook
 ----------------
 
-    - hosts: servers
-      roles:
-	     - andrewrothstein.supervisord
-         - andrewrothstein.jupyter-supervisord
+```yml
+- hosts: servers
+  roles:
+    - andrewrothstein.supervisord
+    - andrewrothstein.jupyter-supervisord
+```
 
 License
 -------
@@ -34,4 +36,4 @@ MIT
 Author Information
 ------------------
 
-Andrew Rothstein andrew.rothstein@gmail.com
+Andrew Rothstein <andrew.rothstein@gmail.com>
