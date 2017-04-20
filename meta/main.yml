@@ -29,7 +29,7 @@ galaxy_info:
 
 dependencies:
   - role: andrewrothstein.jupyter-profile
-    version: v3.1.4
+    version: v3.1.5
     jupyter_profile_name: '{{jupyter_supervisord_name}}'
     jupyter_profile_environment: '{{jupyter_supervisord_environment}}'
     jupyter_profile_conda_cleanup: '{{jupyter_supervisord_conda_cleanup}}'
