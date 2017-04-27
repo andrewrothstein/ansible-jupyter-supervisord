@@ -34,7 +34,7 @@ dependencies:
     jupyter_profile_environment: '{{jupyter_supervisord_environment}}'
     jupyter_profile_conda_cleanup: '{{jupyter_supervisord_conda_cleanup}}'
   - role: andrewrothstein.supervisord-program
-    version: v1.0.3
+    version: v1.0.4
     supervisord_program_name: jupyter
     supervisord_program_command: /usr/local/bin/run-jupyter-notebook.sh
     supervisord_username: '{{jupyter_supervisord_username}}'
