@@ -32,11 +32,12 @@ galaxy_info:
 
 dependencies:
   - role: andrewrothstein.jupyter-profile
-    version: v3.1.9
+    version: v4.0.0
     jupyter_profile_name: '{{jupyter_supervisord_name}}'
     jupyter_profile_environment: '{{jupyter_supervisord_environment}}'
     jupyter_profile_conda_cleanup: '{{jupyter_supervisord_conda_cleanup}}'
     jupyter_profile_privilege_escalate: '{{jupyter_supervisord_privilege_escalate}}'
+    jupyter_profile_addl_pkgs: '{{jupyter_supervisord_addl_pkgs|default(jupyter_supervisord_dflt_addl_pkgs)}}'
   - role: andrewrothstein.supervisord-program
     version: v1.0.4
     supervisord_program_name: jupyter

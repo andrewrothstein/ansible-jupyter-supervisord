@@ -12,3 +12,9 @@ jupyter_supervisord_conda_cleanup: False
 # List set of environment files to load
 #jupyter_supervisord_env_files:
 #  - /foo/profile.d/java.sh
+
+jupyter_supervisord_dflt_addl_pkgs:
+  - p: jupyter
+  - p: nb_conda
+  - p: nbpresent
+  - p: nb_anacondacloud
