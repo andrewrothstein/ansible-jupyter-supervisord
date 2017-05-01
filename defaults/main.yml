@@ -5,8 +5,10 @@ jupyter_supervisord_environment: environment.yml
 jupyter_supervisord_conda_root: /usr/local/anaconda
 jupyter_supervisord_username: root
 
+jupyter_supervisord_privilege_escalate: True
+
 jupyter_supervisord_conda_cleanup: False
 
 # List set of environment files to load
 #jupyter_supervisord_env_files:
-#  - /etc/profile.d/java.sh
+#  - /foo/profile.d/java.sh

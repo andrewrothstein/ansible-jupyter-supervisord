@@ -1,10 +1,12 @@
 ---
 - name: resolve jupyter-notebook run script
-  become: yes
+  become: '{{jupyter_supervisord_privilege_escalate}}'
   become_user: root
   with_items:
-    - usr/local/bin/run-jupyter-notebook.sh
-  template: >
-    src={{item}}.j2
-    dest=/{{item}}
-    mode=0755
+    - d: /usr/local/bin
+      f: run-jupyter-notebook.sh
+      m: '0755'
+  template:
+    src: '{{item.f}}.j2'
+    dest: '{{item.d}}/{{item.f}}'
+    mode: '{{item.m}}'
