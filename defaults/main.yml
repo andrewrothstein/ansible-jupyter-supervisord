@@ -9,6 +9,10 @@ jupyter_supervisord_privilege_escalate: True
 
 jupyter_supervisord_conda_cleanup: False
 
+jupyter_supervisord_program_stderr_logfile: /var/log/supervisor/err_jupyter_supervisord.log
+jupyter_supervisord_program_stdout_logfile: /var/log/supervisor/out_jupyter_supervisord.log
+jupyter_supervisord_program_redirect_stderr: false
+
 # List set of environment files to load
 #jupyter_supervisord_env_files:
 #  - /foo/profile.d/java.sh
