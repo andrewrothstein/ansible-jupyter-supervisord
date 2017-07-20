@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-jupyter-supervisord.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-jupyter-supervisord)
 andrewrothstein.jupyter-supervisord
 =========
+[![Build Status](https://travis-ci.org/andrewrothstein/ansible-jupyter-supervisord.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-jupyter-supervisord)
 
 Installs a supervisord program specification for a Jupyter notebook
 
