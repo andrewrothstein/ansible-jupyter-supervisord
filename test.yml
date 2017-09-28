@@ -3,5 +3,3 @@
   roles:
     - role: '{{playbook_dir}}'
       jupyter_supervisord_name: jupyter-supervisord-test
-      jupyter_supervisord_environment: jupyter-supervisord-test-environment.yml
-      

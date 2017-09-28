@@ -1,8 +1,10 @@
-andrewrothstein.jupyter-supervisord
-=========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-jupyter-supervisord.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-jupyter-supervisord)
+spk83.jupyter-supervisord
+=========================
+[![Build Status](https://travis-ci.org/spk83/ansible-jupyter-supervisord.svg?branch=master)](https://travis-ci.org/spk83/ansible-jupyter-supervisord)
 
-Installs a supervisord program specification for a Jupyter notebook
+Installs a supervisord program specification for a Jupyter notebook server.
+
+To run notebook non-interactively, use `JUPYTER_SUPERVISORD_EXECUTE_NB` environment variable to specify notebook to run and use `JUPYTER_SUPERVISORD_NBCONVERT_OPTIONS` environemnt variable to add arguments to `jupyter nbconvert` command.
 
 Requirements
 ------------
@@ -25,8 +27,8 @@ Example Playbook
 ```yml
 - hosts: servers
   roles:
-    - andrewrothstein.supervisord
-    - andrewrothstein.jupyter-supervisord
+    - spk83.supervisord
+    - spk83.jupyter-supervisord
 ```
 
 License
@@ -38,3 +40,8 @@ Author Information
 ------------------
 
 Andrew Rothstein <andrew.rothstein@gmail.com>
+
+Contributors
+------------
+
+Vishal Shah <vishal.shah@nyu.edu>
