@@ -1,6 +1,6 @@
-spk83.jupyter-supervisord
+andrewrothstein.jupyter-supervisord
 =========================
-[![Build Status](https://travis-ci.org/spk83/ansible-jupyter-supervisord.svg?branch=master)](https://travis-ci.org/spk83/ansible-jupyter-supervisord)
+[![Build Status](https://travis-ci.org/andrewrothstein/ansible-jupyter-supervisord.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-jupyter-supervisord)
 
 Installs a supervisord program specification for a Jupyter notebook server.
 
@@ -27,8 +27,8 @@ Example Playbook
 ```yml
 - hosts: servers
   roles:
-    - spk83.supervisord
-    - spk83.jupyter-supervisord
+    - andrewrothstein.supervisord
+    - andrewrothstein.jupyter-supervisord
 ```
 
 License
