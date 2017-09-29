@@ -4,7 +4,7 @@ spk83.jupyter-supervisord
 
 Installs a supervisord program specification for a Jupyter notebook server.
 
-To run notebook non-interactively, use `JUPYTER_SUPERVISORD_EXECUTE_NB` environment variable to specify notebook to run and use `JUPYTER_SUPERVISORD_NBCONVERT_OPTIONS` environemnt variable to add arguments to `jupyter nbconvert` command.
+To run notebook non-interactively, set `jupyter_supervisord_run_nbconvert_condition` to `True` and use `jupyter_supervisord_nbconvert_cli_options` to provide run options.
 
 Requirements
 ------------

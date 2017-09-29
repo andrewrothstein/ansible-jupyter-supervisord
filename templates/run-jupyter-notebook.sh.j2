@@ -6,12 +6,14 @@ source activate {{jupyter_supervisord_name}}
 source {{env_file}}
 {% endfor %}
 
-if [[ -z "${JUPYTER_SUPERVISORD_EXECUTE_NB}"]]; then
-	jupyter notebook \
-		--Session.username={{jupyter_supervisord_username}} \
-		{{jupyter_supervisord_eff_config_file}} \
-		{{jupyter_supervisord_eff_notebook_dir}}
+if {{jupyter_supervisord_run_nbconvert_condition}}; then
+	jupyter nbconvert \
+		{{jupyter_supervisord_nbconvert_cli_options|default("")}} \
+		{{jupyter_supervisord_nbconvert_nb|default("")}}
 else
-	jupyter nbconvert ${JUPYTER_SUPERVISORD_NBCONVERT_OPTIONS} \
-		--execute ${JUPYTER_SUPERVISORD_EXECUTE_NB}
+	jupyter notebook \
+		{{jupyter_supervisord_eff_config_file}} \
+		{{jupyter_supervisord_eff_notebook_dir}} \
+		{{jupyter_supervisord_addl_cli_options|default("")}}
+
 fi
