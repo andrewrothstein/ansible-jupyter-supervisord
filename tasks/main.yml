@@ -1,6 +1,6 @@
 ---
 - name: resolve jupyter-notebook run script
-  become: '{{jupyter_supervisord_privilege_escalate}}'
+  become: yes
   become_user: root
   with_items:
     - d: /usr/local/bin

@@ -1,24 +1,24 @@
 ---
 jupyter_supervisord_name: jupyter
-jupyter_supervisord_environment: environment.yml
 
-jupyter_supervisord_conda_root: /usr/local/anaconda
 jupyter_supervisord_username: root
-
-jupyter_supervisord_privilege_escalate: True
-
-jupyter_supervisord_conda_cleanup: False
 
 jupyter_supervisord_program_stderr_logfile: /var/log/supervisor/err_jupyter_supervisord.log
 jupyter_supervisord_program_stdout_logfile: /var/log/supervisor/out_jupyter_supervisord.log
-jupyter_supervisord_program_redirect_stderr: false
+jupyter_supervisord_program_redirect_stderr: False
+
+jupyter_supervisord_autorestart: unexpected
 
 # List set of environment files to load
-#jupyter_supervisord_env_files:
-#  - /foo/profile.d/java.sh
+# jupyter_supervisord_env_files:
+#   - /foo/profile.d/java.sh
 
-jupyter_supervisord_dflt_addl_pkgs:
-  - p: jupyter
-  - p: nb_conda
-  - p: nbpresent
-  - p: nb_anacondacloud
+# jupyter_supervisord_config_file: /notebook-config.py
+# jupyter_supervisord_notebook_dir: /notebook-dir
+# jupyter_supervisord_addl_cli_options: --Session.username=jdoe
+
+jupyter_supervisord_run_nbconvert_condition: False
+
+# http://nbconvert.readthedocs.io/en/latest/index.html
+# jupyter_supervisord_nbconvert_cli_options: --ExecutePreprocessor.timeout=600 --ExecutePreprocessor.kernel_name=python2
+# jupyter_supervisord_nbconvert_nb: test.ipynb

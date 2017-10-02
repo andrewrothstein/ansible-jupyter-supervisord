@@ -26,23 +26,16 @@ galaxy_info:
       versions:
         - all
   galaxy_tags:
-    - python
     - jupyter
     - supervisord
 
 dependencies:
-  - role: andrewrothstein.jupyter-profile
-    version: v4.0.1
-    jupyter_profile_name: '{{jupyter_supervisord_name}}'
-    jupyter_profile_environment: '{{jupyter_supervisord_environment}}'
-    jupyter_profile_conda_cleanup: '{{jupyter_supervisord_conda_cleanup}}'
-    jupyter_profile_privilege_escalate: '{{jupyter_supervisord_privilege_escalate}}'
-    jupyter_profile_addl_pkgs: '{{jupyter_supervisord_addl_pkgs|default(jupyter_supervisord_dflt_addl_pkgs)}}'
   - role: andrewrothstein.supervisord-program
-    version: v1.0.6
+    version: v1.1.0
     supervisord_program_name: jupyter
     supervisord_program_command: /usr/local/bin/run-jupyter-notebook.sh
-    supervisord_username: '{{jupyter_supervisord_username}}'
+    supervisord_program_username: '{{jupyter_supervisord_username}}'
     supervisord_program_stderr_logfile: '{{jupyter_supervisord_program_stderr_logfile}}'
     supervisord_program_stdout_logfile: '{{jupyter_supervisord_program_stdout_logfile}}'
     supervisord_program_redirect_stderr: '{{jupyter_supervisord_program_redirect_stderr}}'
+    supervisord_program_autorestart: '{{jupyter_supervisord_autorestart}}'

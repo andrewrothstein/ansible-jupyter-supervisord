@@ -1,9 +1,7 @@
 ---
 # vars file for jupyter-supervisord
-jupyter_supervisord_env_dir: '{{jupyter_supervisord_conda_root}}/envs/{{jupyter_supervisord_name}}'
-jupyter_supervisord_bin_dir: '{{jupyter_supervisord_env_dir}}/bin'
-jupyter_supervisord_profile_py: '{{jupyter_supervisord_env_dir}}/notebook_config.py'
+jupyter_supervisord_eff_config_file: >-
+  {% if jupyter_supervisord_config_file is defined %}--config={{jupyter_supervisord_config_file}}{% endif %}
 
 jupyter_supervisord_eff_notebook_dir: >-
   {% if jupyter_supervisord_notebook_dir is defined %}--NotebookApp.notebook_dir={{jupyter_supervisord_notebook_dir}}{% endif %}
-
