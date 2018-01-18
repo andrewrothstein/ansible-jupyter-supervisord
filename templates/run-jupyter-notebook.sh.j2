@@ -7,13 +7,7 @@ source {{env_file}}
 {% endfor %}
 
 if {{jupyter_supervisord_run_nbconvert_condition}}; then
-	jupyter nbconvert \
-		{{jupyter_supervisord_nbconvert_cli_options|default("")}} \
-		{{jupyter_supervisord_nbconvert_nb|default("")}}
+	jupyter nbconvert {{jupyter_supervisord_nbconvert_cli_options|default("")}} {{jupyter_supervisord_nbconvert_nb|default("")}}
 else
-	jupyter notebook \
-		{{jupyter_supervisord_eff_config_file}} \
-		{{jupyter_supervisord_eff_notebook_dir}} \
-		{{jupyter_supervisord_addl_cli_options|default("")}}
-
+	jupyter notebook {{jupyter_supervisord_eff_config_file}} {{jupyter_supervisord_eff_notebook_dir}} {{jupyter_supervisord_addl_cli_options|default("")}}
 fi

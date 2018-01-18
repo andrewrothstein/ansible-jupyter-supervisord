@@ -32,7 +32,7 @@ galaxy_info:
 
 dependencies:
   - role: andrewrothstein.supervisord-program
-    version: v1.1.0
+    version: v1.1.1
     supervisord_program_name: jupyter
     supervisord_program_command: /usr/local/bin/run-jupyter-notebook.sh
     supervisord_program_username: '{{jupyter_supervisord_username}}'
