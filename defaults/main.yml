@@ -18,6 +18,7 @@ jupyter_supervisord_autorestart: unexpected
 # jupyter_supervisord_addl_cli_options: --Session.username=jdoe
 
 jupyter_supervisord_run_nbconvert_condition: False
+jupyter_supervisord_enable_jupyterlab: False 
 
 # http://nbconvert.readthedocs.io/en/latest/index.html
 # jupyter_supervisord_nbconvert_cli_options: --ExecutePreprocessor.timeout=600 --ExecutePreprocessor.kernel_name=python2

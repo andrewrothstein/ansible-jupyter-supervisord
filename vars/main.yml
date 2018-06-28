@@ -5,3 +5,6 @@ jupyter_supervisord_eff_config_file: >-
 
 jupyter_supervisord_eff_notebook_dir: >-
   {% if jupyter_supervisord_notebook_dir is defined %}--NotebookApp.notebook_dir={{jupyter_supervisord_notebook_dir}}{% endif %}
+
+jupyter_notebook_or_lab: >-
+  {% if jupyter_supervisord_enable_jupyterlab %}lab{% elif %}notebook{% endif %}
