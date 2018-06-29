@@ -6,7 +6,7 @@ Installs a supervisord program specification for a Jupyter notebook server.
 
 To run notebook non-interactively, set `jupyter_supervisord_run_nbconvert_condition` to `True` and use `jupyter_supervisord_nbconvert_cli_options` to provide run options.
 
-To run JupyterLab, set `jupyterlab_enable` to `True`
+To run JupyterLab, set `jupyter_supervisord_ide` to `lab`
 
 Requirements
 ------------
