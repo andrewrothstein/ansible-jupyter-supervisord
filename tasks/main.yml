@@ -4,7 +4,7 @@
   become_user: root
   with_items:
     - d: /usr/local/bin
-      f: run-jupyter-notebook.sh
+      f: run-jupyter.sh
       m: '0755'
   template:
     src: '{{item.f}}.j2'
