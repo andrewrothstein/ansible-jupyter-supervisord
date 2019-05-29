@@ -1,42 +1,40 @@
----
+dependencies:
+- role: andrewrothstein.supervisord-program
+  supervisord_program_autorestart: '{{jupyter_supervisord_autorestart}}'
+  supervisord_program_command: /usr/local/bin/run-jupyter.sh
+  supervisord_program_name: jupyter
+  supervisord_program_redirect_stderr: '{{jupyter_supervisord_program_redirect_stderr}}'
+  supervisord_program_stderr_logfile: '{{jupyter_supervisord_program_stderr_logfile}}'
+  supervisord_program_stdout_logfile: '{{jupyter_supervisord_program_stdout_logfile}}'
+  supervisord_program_username: '{{jupyter_supervisord_username}}'
+  version: v1.1.3
 galaxy_info:
   author: Andrew Rothstein
-  description: installs supervisord conf for a jupyter notebook
   company: BlackRock
+  description: installs supervisord conf for a jupyter notebook
+  galaxy_tags:
+  - jupyter
+  - supervisord
   license:
-    - MIT
+  - MIT
   min_ansible_version: 2.0
   platforms:
-    - name: EL
-      versions:
-        - all
-    - name: Fedora
-      versions:
-        - all
-    - name: Debian
-      versions:
-        - jessie
-        - stretch
-    - name: Ubuntu
-      versions:
-        - all
-    - name: Alpine
-      versions:
-        - all
-    - name: MacOSX
-      versions:
-        - all
-  galaxy_tags:
-    - jupyter
-    - supervisord
-
-dependencies:
-  - role: andrewrothstein.supervisord-program
-    version: v1.1.1
-    supervisord_program_name: jupyter
-    supervisord_program_command: /usr/local/bin/run-jupyter.sh
-    supervisord_program_username: '{{jupyter_supervisord_username}}'
-    supervisord_program_stderr_logfile: '{{jupyter_supervisord_program_stderr_logfile}}'
-    supervisord_program_stdout_logfile: '{{jupyter_supervisord_program_stdout_logfile}}'
-    supervisord_program_redirect_stderr: '{{jupyter_supervisord_program_redirect_stderr}}'
-    supervisord_program_autorestart: '{{jupyter_supervisord_autorestart}}'
+  - name: EL
+    versions:
+    - all
+  - name: Fedora
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - jessie
+    - stretch
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Alpine
+    versions:
+    - all
+  - name: MacOSX
+    versions:
+    - all
