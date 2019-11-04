@@ -15,7 +15,7 @@ env:
 - OS=fedora_24
 - OS=fedora_25
 - OS=fedora_26
-- OS=ubuntu_trusty
+- OS=ubi8_8.0
 - OS=ubuntu_xenial
 language: python
 python: '3.7'
